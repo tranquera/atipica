@@ -3,25 +3,26 @@
 
 <head>
   <meta charset="utf-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="José Pablo Leandro Martín">
-    <title>Atipica · Diseño & Comunicación</title>
-    <link href="assets/img/favicon.png" rel="icon">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="José Pablo Leandro Martín">
+  <title>Atipica · Diseño & Comunicación</title>
+  <link href="assets/img/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <div id="app-container" class="container-fluid">
     <div id="app-logo" class="row">
-      <img src="assets/img/logo.png" alt="Atipica" class="logo"/>
+      <img src="assets/img/logo.png" alt="Atipica" class="logo" />
     </div>
     <div id="app-contact" class="row">
       <div class="col-md-4">
-        <i class="fa fa-facebook-square"></i> <a href="https://www.facebook.com/atipicadesign05" target="_blank" >atipica design</a>
+        <i class="fa fa-facebook-square"></i> <a href="https://www.facebook.com/atipicadesign05" target="_blank">atipica design</a>
       </div>
       <div class="col-md-4">
         <i class="fa fa-mobile"></i> +54 3447 416562
@@ -34,15 +35,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <style media="screen">
-   a {
-  color: white;
-  text-decoration: none;
-   }
-   a:hover, a:focus {
-   text-decoration: none;
-   color: white;
-   cursor: pointer;
-   }
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
 
     #app-container {
       top: 0px;
@@ -54,12 +61,39 @@
       background-repeat: repeat;
       background-image: url("assets/img/background.png");
       background-color: #00A68B;
+      -moz-animation-name: showBackground;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-timing-function: ease-in;
+      -moz-animation-duration: 0.3s;
+      -webkit-animation-name: showBackground;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-in;
+      -webkit-animation-duration: 0.3s;
+      animation-name: showBackground;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 0.3s;
     }
-    #app-container {
-        animation: fadein 1s;
-        -moz-animation: fadein 1s; /* Firefox */
-        -webkit-animation: fadein 1s; /* Safari and Chrome */
-        -o-animation: fadein 1s; /* Opera */
+
+    @-moz-keyframes showBackground {
+      0% {}
+      100% {
+        -moz-animation: fadein 2s;
+      }
+    }
+
+    @-webkit-keyframes showBackground {
+      0% {}
+      100% {
+        -webkit-animation: fadein 2s;
+      }
+    }
+
+    @keyframes showBackground {
+      0% {}
+      100% {
+        animation: fadein 2s;
+      }
     }
 
     #app-logo {
@@ -70,10 +104,13 @@
     }
 
     #app-container {
-        animation: fadein 2s;
-        -moz-animation: fadein 2s; /* Firefox */
-        -webkit-animation: fadein 2s; /* Safari and Chrome */
-        -o-animation: fadein 2s; /* Opera */
+      animation: fadein 2s;
+      -moz-animation: fadein 2s;
+      /* Firefox */
+      -webkit-animation: fadein 2s;
+      /* Safari and Chrome */
+      -o-animation: fadein 2s;
+      /* Opera */
     }
 
     .logo {
@@ -90,67 +127,73 @@
       text-align: center;
       width: 100%;
     }
-   
-   @media (max-width: 1920px) {    
-   #app-contact {
-   font-size: 18px;
-   }
-   } 
-   
-   @media (max-width: 380px) {
+
+    @media (max-width: 1920px) {
+      #app-contact {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      #app-contact {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .logo {
+        width: 80%;
+      }
+    }
+
     #app-contact {
-   font-size: 12px;
-   }
-   }
-   
-   @media (max-width: 1024px) {
-   .logo {
-   width: 80%;
-   }
-   } 
-
-   #app-contact {
-        animation: fadein 4s;
-        -moz-animation: fadein 4s; /* Firefox */
-        -webkit-animation: fadein 4s; /* Safari and Chrome */
-        -o-animation: fadein 4s; /* Opera */
+      animation: fadein 4s;
+      -moz-animation: fadein 4s;
+      /* Firefox */
+      -webkit-animation: fadein 4s;
+      /* Safari and Chrome */
+      -o-animation: fadein 4s;
+      /* Opera */
     }
+
     @keyframes fadein {
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-    @-moz-keyframes fadein { /* Firefox */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-    @-webkit-keyframes fadein { /* Safari and Chrome */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-    @-o-keyframes fadein { /* Opera */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity: 1;
-        }
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
-// L'ecume dès jours
-// Poirot
-// Montalbano
+    @-moz-keyframes fadein {
+      /* Firefox */
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes fadein {
+      /* Safari and Chrome */
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @-o-keyframes fadein {
+      /* Opera */
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </body>
 
